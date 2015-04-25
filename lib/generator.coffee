@@ -52,12 +52,10 @@ class Generator
 
     args.push(src)
 
-    console.log args
-
     new BufferedProcess({
 
       command: path.join(
-        atom.packages.resolvePackagePath('jsdoc-view'),
+        atom.packages.resolvePackagePath('jsdoc-generator'),
         'node_modules',
         '.bin',
         'jsdoc'
