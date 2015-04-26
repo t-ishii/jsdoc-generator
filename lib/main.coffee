@@ -15,7 +15,7 @@ module.exports = Main =
     options:
       type: 'string'
       default: 'none'
-      description: '--verbose, --test, -X, etc...'
+      description: 'example) -v --debug --nocolor'
 
   subscriptions: null
 

@@ -52,10 +52,10 @@ class Generator
 
     opt = atom.config.get('jsdoc-generator.options')
 
-    args.push(opt) if opt isnt 'none'
+    Array::push.apply(args, opt.split(/\s+/)) if opt isnt 'none'
 
     args.push(src)
-
+  
     new BufferedProcess({
 
       command: path.join(
