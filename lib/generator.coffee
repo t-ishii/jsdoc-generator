@@ -39,6 +39,10 @@ class Generator
       when 'tree' then src = @getSelectedItemPath()
       when 'editor' then src = @getActiveEditorPath()
 
+    if not src?
+      atom.notifications.addWarning('jsdoc-generator: file not found.')
+      return
+
     outDir = atom.config.get('jsdoc-generator.outputDirectory')
 
     if outDir is './out'
