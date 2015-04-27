@@ -2,6 +2,7 @@
 
 path = require 'path'
 os = require 'os'
+fs = require 'fs'
 
 module.exports =
 class Generator
@@ -62,6 +63,16 @@ class Generator
       cmd = 'jsdoc.cmd'
     else
       cmd = 'jsdoc'
+
+    # jsdoc.cmd is not found
+    if cmd is 'jsdoc.cmd' and not fs.existsSync(
+      path.join(
+        atom.packages.resolvePackagePath('jsdoc-generator'),
+        'node_modules',
+        '.bin',
+        cmd
+      )
+    ) then cmd = 'jsdoc'
 
     new BufferedProcess({
 
