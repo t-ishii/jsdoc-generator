@@ -1,6 +1,7 @@
 {$, BufferedProcess} = require 'atom'
 
 path = require 'path'
+os = require 'os'
 
 module.exports =
 class Generator
@@ -55,14 +56,20 @@ class Generator
     Array::push.apply(args, opt.split(/\s+/)) if opt isnt 'none'
 
     args.push(src)
-  
+
+    # detected execute cmd
+    if os.platform() is 'win32'
+      cmd = 'jsdoc.cmd'
+    else
+      cmd = 'jsdoc'
+
     new BufferedProcess({
 
       command: path.join(
         atom.packages.resolvePackagePath('jsdoc-generator'),
         'node_modules',
         '.bin',
-        'jsdoc'
+        cmd
       )
 
       args: args
