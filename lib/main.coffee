@@ -5,6 +5,7 @@ Generator = null
 
 module.exports = Main =
 
+  # settings
   config:
     debugMode:
       type: 'boolean'

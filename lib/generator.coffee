@@ -42,7 +42,7 @@ class Generator
       when 'editor' then src = @getActiveEditorPath()
 
     if not src?
-      atom.notifications.addWarning('jsdoc-generator: file not found.')
+      atom.notifications?.addWarning('jsdoc-generator: file not found.')
       return
 
     outDir = atom.config.get('jsdoc-generator.outputDirectory')
@@ -58,13 +58,16 @@ class Generator
 
     args.push(src)
 
+    # debug: output arguments
+    console.log args if isDebug
+
     # detected execute cmd
     if os.platform() is 'win32'
       cmd = 'jsdoc.cmd'
     else
       cmd = 'jsdoc'
 
-    # jsdoc.cmd is not found
+    # jsdoc.cmd file is not found -> jsdoc
     if cmd is 'jsdoc.cmd' and not fs.existsSync(
       path.join(
         atom.packages.resolvePackagePath('jsdoc-generator'),
