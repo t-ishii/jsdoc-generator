@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.0.5",
-    "jsdoc": "~3.2"
+    "jsdoc": "^3.3"
   }
 }
