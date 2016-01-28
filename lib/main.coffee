@@ -12,7 +12,8 @@ module.exports = Main =
       default: false
     outputDirectory:
       type: 'string'
-      default: './out'
+      default: '{working directory}/out'
+      description: "#{process.cwd()}"
     options:
       type: 'string'
       default: 'none'
