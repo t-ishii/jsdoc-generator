@@ -1,7 +1,7 @@
 {
   "name": "jsdoc-generator",
   "main": "./lib/main",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "generate jsdoc.",
   "repository": "https://github.com/t-ishii/jsdoc-generator",
   "license": "MIT",
