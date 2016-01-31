@@ -12,7 +12,7 @@ module.exports = Main =
       default: false
     outputDirectory:
       type: 'string'
-      default: '{working directory}/out'
+      default: '{pwd}/out'
       description: "#{process.cwd()}"
     options:
       type: 'string'

@@ -48,8 +48,9 @@ class Generator
 
     outDir = atom.config.get('jsdoc-generator.outputDirectory')
 
-    if outDir is '{working directory}/out'
-      args = ['-d', path.join(path.dirname(src), 'out')]
+    if /^{pwd}\//.test outDir
+      dir = outDir.replace /^{pwd}/, ''
+      args = ['-d', path.join(path.dirname(src), dir)]
     else
       args = ['-d', outDir]
 
