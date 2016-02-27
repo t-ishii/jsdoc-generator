@@ -10,14 +10,15 @@ module.exports = Main =
     debugMode:
       type: 'boolean'
       default: false
+      description: 'output log'
     outputDirectory:
       type: 'string'
       default: '{pwd}/out'
-      description: "#{process.cwd()}"
+      description: "relative path starts from `#{process.cwd()}`"
     options:
       type: 'string'
       default: 'none'
-      description: 'example) -v --debug --nocolor'
+      description: 'example) `--debug --nocolor`'
 
   subscriptions: null
 
