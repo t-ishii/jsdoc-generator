@@ -4,11 +4,11 @@ output jsdoc.
 
 ## Update
 
+v0.2.3  
+update description
+
 v0.2.2
 update README.md
-
-v0.2.1  
-add {pwd} place holder.  
 
 ---
 

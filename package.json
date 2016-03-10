@@ -2,7 +2,7 @@
   "name": "jsdoc-generator",
   "main": "./lib/main",
   "version": "0.2.2",
-  "description": "generate jsdoc.",
+  "description": "generate html documentation from jsdoc annotation.",
   "repository": "https://github.com/t-ishii/jsdoc-generator",
   "license": "MIT",
   "engines": {
