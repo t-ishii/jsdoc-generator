@@ -34,7 +34,7 @@ update README.md
 2. select `Jsdoc Generator` from `Packages`.
 3. `Output Directory` section.
 
-***exapmple***
+***example***
 
 Active Text Editor or Select Tree source Path:
 `/project/src/js/sample.js`
