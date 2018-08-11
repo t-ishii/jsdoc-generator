@@ -37,9 +37,12 @@ class Generator
   execute: (actName) ->
 
     isDebug = atom.config.get('jsdoc-generator.debugMode')
+    args = []
 
     switch actName
-      when 'tree' then src = @getSelectedItemPath()
+      when 'tree'
+        src = @getSelectedItemPath()
+        args.push('-r')
       when 'editor' then src = @getActiveEditorPath()
 
     if not src?
@@ -50,9 +53,9 @@ class Generator
 
     if /^{pwd}\//.test outDir
       dir = outDir.replace /^{pwd}/, ''
-      args = ['-d', path.join(path.dirname(src), dir)]
+      args = args.concat(['-d', path.join(path.dirname(src), dir)])
     else
-      args = ['-d', outDir]
+      args = args.concat(['-d', outDir])
 
     opt = atom.config.get('jsdoc-generator.options')
 
