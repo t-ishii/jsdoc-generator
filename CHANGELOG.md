@@ -1,3 +1,6 @@
+## 0.2.5
+* Added option to search subdirectories recursively for jsdoc argument
+
 ## 0.2.4
 * Update npm modules
 
